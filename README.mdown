@@ -1,0 +1,28 @@
+# Qbyt's dotfiles
+
+## Because configs are cool
+
+These are my simple dotfiles for vim, zsh and git. I was inspired
+by [this post](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/)
+and [these](https://github.com/holman/dotfiles/) [repos](https://github.com/ryanb/dotfiles).
+
+## Install
+
+Back up your existing dotfiles first.
+
+- `git clone git://github.com/qbyt/dotfiles ~/.dotfiles`
+- `cd ~/.dotfiles`
+- `rake install`
+
+[Zach](http://github.com/holman/)'s rakefile wil symlink everything nicely for you.
+
+## Afters
+
+You might need to adjust some paths and whatnot, zsh/zshrc and git/gitconfig
+are places to start. 
+
+## Thanks
+
+- [Ryan Bates](http://github.com/ryanb)
+- [Zach Holman](http://github.com/holman/)
+- [Steve Losh](http://github.com/sjl)

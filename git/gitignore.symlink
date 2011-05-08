@@ -1,0 +1,42 @@
+# GLOBAL
+# --------------------------------------------------------
+.gitignore
+.DS_Store
+*.esproj
+*.swp
+*~
+
+# Django
+# --------------------------------------------------------
+*.pyc
+local_settings.py
+
+
+# EE 2
+# --------------------------------------------------------
+/system/expressionengine/config/config.inc.php
+/system/expressionengine/cache/**/*
+/public/assets/min/cache/*
+/public/assets/images/resizer_cache/*
+/public/assets/images/captchas/*
+/public/uploads/**/**/**/**
+/images/sized/*
+!/public/uploads/system/avatars/default_set/*
+!/public/uploads/system/smileys/*.gif
+
+# EE 1.6
+#. --------------------------------------------------------
+/manage/config.inc.php
+/manage/cache/**/*
+/manage/cache/*
+/public/assets/images/resizer_cache/*
+/public/assets/images/captchas/*
+/uploads/**/**/**/**
+!/uploads/system/avatars/default_set/*.gif
+!/uploads/system/smileys/*.gif
+/assets/min/cache/*
+/manage/bridge/codeigniter/system/cache/**
+
+# Exceptions
+# --------------------------------------------------------
+!index.html
