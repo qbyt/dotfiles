@@ -4,3 +4,6 @@
 [submodule "vim/bundle/checksyntax_vim"]
 	path = vim/bundle/checksyntax_vim
 	url = https://github.com/tomtom/checksyntax_vim.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
