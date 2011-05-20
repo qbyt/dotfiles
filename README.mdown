@@ -13,6 +13,8 @@ Back up your existing dotfiles first.
 - `git clone git://github.com/qbyt/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `rake install`
+- `git submodule init`
+- `git submodule update`
 
 [Zach](http://github.com/holman/)'s rakefile wil symlink everything nicely for you.
 
