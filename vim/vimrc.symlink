@@ -69,3 +69,7 @@ nnoremap <C-l> <C-w>l
 
 let g:yankring_history_file = '.yankring'
 map <Leader>n :NERDTreeToggle<CR>
+
+" Hit escape to clear a search
+:nnoremap <esc> :noh<return><esc>
+
