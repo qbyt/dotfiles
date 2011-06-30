@@ -73,3 +73,13 @@ map <Leader>n :NERDTreeToggle<CR>
 " Hit escape to clear a search
 :nnoremap <esc> :noh<return><esc>
 
+" Help a brother out with commonly used filetypes & Django files
+nnoremap _dt :set ft=htmldjango<CR>
+nnoremap _pd :set ft=python.django<CR>
+
+au BufNewFile,BufRead admin.py     setlocal filetype=python.django
+au BufNewFile,BufRead urls.py      setlocal filetype=python.django
+au BufNewFile,BufRead models.py    setlocal filetype=python.django
+au BufNewFile,BufRead views.py     setlocal filetype=python.django
+au BufNewFile,BufRead settings.py  setlocal filetype=python.django
+au BufNewFile,BufRead forms.py     setlocal filetype=python.djangoi
