@@ -52,3 +52,6 @@
 [submodule "vim/bundle/vim-scratch"]
 	path = vim/bundle/vim-scratch
 	url = https://github.com/duff/vim-scratch.git
+[submodule "vim/bundle/greplace.vim"]
+	path = vim/bundle/greplace.vim
+	url = https://github.com/vim-scripts/greplace.vim.git
