@@ -15,6 +15,7 @@ local_settings.py
 # EE 2
 # --------------------------------------------------------
 /system/expressionengine/config/config.inc.php
+/system/expressionengine/config/local_settings.php
 /system/expressionengine/cache/**/*
 /public/assets/min/cache/*
 /public/assets/images/resizer_cache/*

@@ -28,6 +28,8 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
+set number
+set relativenumber
 
 let mapleader = ","
 
@@ -71,7 +73,7 @@ let g:yankring_history_file = '.yankring'
 map <Leader>n :NERDTreeToggle<CR>
 
 " Hit escape to clear a search
-:nnoremap <esc> :noh<return><esc>
+nnoremap <esc> :noh<return><esc>
 
 " Help a brother out with commonly used filetypes & Django files
 nnoremap _dt :set ft=htmldjango<CR>
@@ -83,3 +85,8 @@ au BufNewFile,BufRead models.py    setlocal filetype=python.django
 au BufNewFile,BufRead views.py     setlocal filetype=python.django
 au BufNewFile,BufRead settings.py  setlocal filetype=python.django
 au BufNewFile,BufRead forms.py     setlocal filetype=python.djangoi
+
+syntax enable
+
+let &t_Co=256
+colorscheme molokai
