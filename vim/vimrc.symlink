@@ -86,6 +86,10 @@ au BufNewFile,BufRead views.py     setlocal filetype=python.django
 au BufNewFile,BufRead settings.py  setlocal filetype=python.django
 au BufNewFile,BufRead forms.py     setlocal filetype=python.djangoi
 
+let clj_paren_rainbow = 1
+let clj_highlight_builtins = 1
+let clj_highlight_contrib = 1
+
 syntax enable
 
 let &t_Co=256
