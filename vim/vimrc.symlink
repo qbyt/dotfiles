@@ -5,6 +5,8 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 set directory=/tmp
 
+syntax enable
+
 set nocompatible
 
 set modelines=0
@@ -58,12 +60,15 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+" Extra keystrokes are for losers
 nnoremap ; :
 
+" Autosave is cool
 au FocusLost * :wa
 
 nnoremap <leader>w <C-w>v<C-w>l
 
+" Non-daft line behavior 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -79,18 +84,19 @@ nnoremap <esc> :noh<return><esc>
 nnoremap _dt :set ft=htmldjango<CR>
 nnoremap _pd :set ft=python.django<CR>
 
+" Hook up django files
 au BufNewFile,BufRead admin.py     setlocal filetype=python.django
 au BufNewFile,BufRead urls.py      setlocal filetype=python.django
 au BufNewFile,BufRead models.py    setlocal filetype=python.django
 au BufNewFile,BufRead views.py     setlocal filetype=python.django
 au BufNewFile,BufRead settings.py  setlocal filetype=python.django
-au BufNewFile,BufRead forms.py     setlocal filetype=python.djangoi
+au BufNewFile,BufRead forms.py     setlocal filetype=python.django
 
-let clj_paren_rainbow = 1
-let clj_highlight_builtins = 1
-let clj_highlight_contrib = 1
+" Go go gadget clojure
+let vimclojure#WantNailgun = 1
+let vimclojure#HighlightBuiltins = 1
+let vimclojure#ParenRainbow = 1
 
-syntax enable
-
+" Hook up colours 
 let &t_Co=256
 colorscheme molokai
