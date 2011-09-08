@@ -1,6 +1,12 @@
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/jslint.vim"]
+	path = vim/bundle/jslint.vim
+	url = https://github.com/hallettj/jslint.vim.git
+[submodule "vim/bundle/pylint.vim"]
+    path = vim/bundle/pylint.vim
+    url = https://github.com/vim-scripts/pylint.vim.git
 [submodule "vim/bundle/checksyntax_vim"]
 	path = vim/bundle/checksyntax_vim
 	url = https://github.com/tomtom/checksyntax_vim.git
@@ -58,3 +64,6 @@
 [submodule "vim/bundle/VimClojure"]
 	path = vim/bundle/VimClojure
 	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "vim/bundle/vim-scratch/mduem"]
+    path = vim/bundle/vim-scratch/mduem
+    url = https://github.com/kana/mduem.git
