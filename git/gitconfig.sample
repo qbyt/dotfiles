@@ -2,7 +2,7 @@
 	name = Your Name
 	email = you@internet.com
 [core]
-	editor = mvim -f
+	editor = vim
 	excludesfile = $HOME/.gitignore
 [diff]
 	tool = Kaleidoscope
