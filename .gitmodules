@@ -1,12 +1,6 @@
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/jslint.vim"]
-	path = vim/bundle/jslint.vim
-	url = https://github.com/hallettj/jslint.vim.git
-[submodule "vim/bundle/pylint.vim"]
-    path = vim/bundle/pylint.vim
-    url = https://github.com/vim-scripts/pylint.vim.git
 [submodule "vim/bundle/checksyntax_vim"]
 	path = vim/bundle/checksyntax_vim
 	url = https://github.com/tomtom/checksyntax_vim.git
@@ -25,12 +19,6 @@
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "vim/bundle/taskpaper.vim"]
-	path = vim/bundle/taskpaper.vim
-	url = https://github.com/vim-scripts/taskpaper.vim.git
-[submodule "vim/bundle/vim-coffee-script"]
-	path = vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -43,27 +31,9 @@
 [submodule "vim/bundle/vim-autoclose"]
 	path = vim/bundle/vim-autoclose
 	url = https://github.com/Townk/vim-autoclose.git
-[submodule "vim/bundle/zen-coding.vim"]
-	path = vim/bundle/zen-coding.vim
-	url = https://github.com/vim-scripts/ZenCoding.vim.git
-[submodule "vim/bundle/vim-scratch"]
-	path = vim/bundle/vim-scratch
-	url = https://github.com/duff/vim-scratch.git
-[submodule "vim/bundle/greplace.vim"]
-	path = vim/bundle/greplace.vim
-	url = https://github.com/vim-scripts/greplace.vim.git
-[submodule "vim/bundle/vim-slime"]
-	path = vim/bundle/vim-slime
-	url = https://github.com/jpalardy/vim-slime.git
 [submodule "vim/bundle/Command-T"]
 	path = vim/bundle/Command-T
 	url = https://github.com/vim-scripts/Command-T.git
-[submodule "vim/bundle/vim-conque"]
-	path = vim/bundle/vim-conque
-	url = https://github.com/chrismetcalf/vim-conque.git
-[submodule "vim/bundle/VimClojure"]
-	path = vim/bundle/VimClojure
-	url = https://github.com/vim-scripts/VimClojure.git
 [submodule "vim/bundle/vim-scratch/mduem"]
-    path = vim/bundle/vim-scratch/mduem
-    url = https://github.com/kana/mduem.git
+	path = vim/bundle/vim-scratch/mduem
+	url = https://github.com/kana/mduem.git

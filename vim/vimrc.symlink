@@ -5,6 +5,10 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 set directory=/tmp
 
+"set term=builtin_ansi
+set term=screen-256color
+
+
 syntax enable
 
 set nocompatible
@@ -32,6 +36,8 @@ set backspace=indent,eol,start
 set laststatus=2
 set number
 set relativenumber
+
+set clipboard=unnamed
 
 let mapleader = ","
 
@@ -100,3 +106,5 @@ let vimclojure#ParenRainbow = 1
 " Hook up colours 
 let &t_Co=256
 colorscheme molokai
+
+map <Esc>[B <Down>
