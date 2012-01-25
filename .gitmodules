@@ -40,9 +40,9 @@
 [submodule "vim/bundle/vim-scratch"]
 	path = vim/bundle/vim-scratch
 	url = https://github.com/duff/vim-scratch.git
-[submodule "vim/bundle/tslime.vim"]
-	path = vim/bundle/tslime.vim
-	url = https://github.com/kikijump/tslime.vim.git
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/tslime.vim"]
+	path = vim/bundle/tslime.vim
+	url = https://github.com/qbyt/tslime.vim.git
