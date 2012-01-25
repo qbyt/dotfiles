@@ -31,9 +31,6 @@
 [submodule "vim/bundle/vim-autoclose"]
 	path = vim/bundle/vim-autoclose
 	url = https://github.com/Townk/vim-autoclose.git
-[submodule "vim/bundle/Command-T"]
-	path = vim/bundle/Command-T
-	url = https://github.com/vim-scripts/Command-T.git
 [submodule "vim/bundle/vim-scratch/mduem"]
 	path = vim/bundle/vim-scratch/mduem
 	url = https://github.com/kana/mduem.git
@@ -46,3 +43,6 @@
 [submodule "vim/bundle/tslime.vim"]
 	path = vim/bundle/tslime.vim
 	url = https://github.com/kikijump/tslime.vim.git
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git

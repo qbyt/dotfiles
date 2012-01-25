@@ -5,9 +5,8 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 set directory=/tmp
 
-"set term=builtin_ansi
-set term=screen-256color
-
+set term=builtin_ansi
+"set term=screen-256color
 
 syntax enable
 
@@ -98,13 +97,11 @@ au BufNewFile,BufRead views.py     setlocal filetype=python.django
 au BufNewFile,BufRead settings.py  setlocal filetype=python.django
 au BufNewFile,BufRead forms.py     setlocal filetype=python.django
 
-" Go go gadget clojure
-let vimclojure#WantNailgun = 1
-let vimclojure#HighlightBuiltins = 1
-let vimclojure#ParenRainbow = 1
+" Remap ctrlp to cmd-t shortcut
+nnoremap <Leader>t :CtrlP<CR>
 
 " Hook up colours 
 let &t_Co=256
 colorscheme molokai
 
-map <Esc>[B <Down>
+map <Esc>[B <Down>]
