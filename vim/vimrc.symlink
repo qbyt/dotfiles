@@ -96,8 +96,11 @@ au BufNewFile,BufRead views.py     setlocal filetype=python.django
 au BufNewFile,BufRead settings.py  setlocal filetype=python.django
 au BufNewFile,BufRead forms.py     setlocal filetype=python.django
 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.pyc
+
 " Remap ctrlp to cmd-t shortcut
 nnoremap <Leader>t :CtrlP<CR>
+let g:ctrlp_custom_ignore = 'env\|venv\'
 
 " Hook up colours 
 let &t_Co=256
