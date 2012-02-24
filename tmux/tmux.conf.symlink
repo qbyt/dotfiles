@@ -1,3 +1,20 @@
+# Fuck yeah, paste
 set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+# For vim
+setw -g xterm-keys on
 set -g default-terminal screen-256color
+
+# For pairing
 setw -g aggressive-resize on
+
+# status bar
+set-option -g status-utf8 on
+set-option -g status-justify right
+set-option -g status-interval 5
+set-option -g status-left-length 30
+set-option -g visual-activity on
+set-window-option -g monitor-activity on
+
+# clock
+set-window-option -g clock-mode-style 24

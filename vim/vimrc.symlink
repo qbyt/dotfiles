@@ -1,90 +1,292 @@
+" .vimrc
+"
+" I borrowed most of this from Steve Losh <steve@stevelosh.com> who knows more
+" about this stuff than I ever will.
+"
+" Source: http://bitbucket.org/sjl/dotfiles/src/tip/vim/
+
+" Warming up ------------------------------------------------------------------
+
 filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
-
 filetype plugin indent on
-set directory=/tmp
-
-set term=screen-256color
-
-syntax enable
-
 set nocompatible
 
+" Basic options ---------------------------------------------------------------
+
+set encoding=utf-8
 set modelines=0
+set autoindent
+set showmode
+set showcmd
+set hidden
+set visualbell
+set cursorline
+set ttyfast
+set backspace=indent,eol,start
+set number
+set relativenumber
+set ruler
+set laststatus=2
+set list
+set listchars=tab:▸\ ,eol:¬
+set shell=/bin/bash
+set lazyredraw
+set matchtime=3
+set showbreak=↪
+set splitbelow
+set splitright
+set fillchars=diff:⣿,vert:│
+set ttimeout
+set notimeout
+set nottimeout
+set autowrite
+set shiftround
+set autoread
+set title
+set linebreak
+set dictionary=/usr/share/dict/words
+
+" Autosave is cool
+au FocusLost * silent! :wa
+
+" Resize splits when the window is resized
+au VimResized * :wincmd =
+
+" Wildmenu completion ---------------------------------------------------------
+
+set wildmenu
+set wildmode=list:longest
+
+set wildignore+=.hg,.git,.svn
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest
+set wildignore+=*.sw?
+set wildignore+=*.DS_Store
+set wildignore+=migrations
+set wildignore+=*.pyc
+set wildignore+=*.orig
+
+" Spacing ---------------------------------------------------------------------
 
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set wrap
+set textwidth=80
+set formatoptions=qrn1
 
-set encoding=utf-8
-set scrolloff=3
-set autoindent
-set showmode
-set showcmd
-set hidden
-set wildmenu
-set wildmode=list:longest
-set visualbell
-set cursorline
-set ttyfast
-set ruler
-set backspace=indent,eol,start
-set laststatus=2
-set number
-set relativenumber
+" Backups ---------------------------------------------------------------------
 
-set clipboard=unnamed
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Leader ----------------------------------------------------------------------
 
 let mapleader = ","
+let maplocalleader = "\\"
+
+" Colors ----------------------------------------------------------------------
+
+syntax on
+set background=dark
+colorscheme molokai
+
+let &t_Co=256
+
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$' " Highlight VCS conflict markers
+
+" Finding things + Gadding about ----------------------------------------------
 
 nnoremap / /\v
 vnoremap / /\v
+
 set ignorecase
 set smartcase
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
+set gdefault
 
-set wrap
-set textwidth=79
-set formatoptions=qrn1
+set scrolloff=3
+set sidescroll=1
+set sidescrolloff=10
 
-set list
-set listchars=tab:▸\ ,eol:¬
+set virtualedit+=block
 
-nnoremap j gj
-nnoremap k gk
+noremap <leader><space> :noh<cr>:call clearmatches()<cr>
 
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
+map <tab> %
 
-" Extra keystrokes are for losers
+" Keep search matches in the middle of the window and pulse the line when moving
+" to them.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Don't move on *
+nnoremap * *<c-o>
+
+" Same when jumping around
+nnoremap g; g;zz
+nnoremap g, g,zz
+
+" Window resizing
+nnoremap <c-left> 5<c-w>>
+nnoremap <c-right> 5<c-w><
+
+" Open a Quickfix window for the last search.
+nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
+
+" Ack for the last search.
+nnoremap <silent> <leader>? :execute "Ack! '" . substitute(substitute(substitute(@/, "\\\\<", "\\\\b", ""), "\\\\>", "\\\\b", ""), "\\\\v", "", "") . "'"<CR>
+
+" Fix linewise visual selection of various text objects
+nnoremap VV V
+nnoremap Vit vitVkoj
+nnoremap Vat vatV
+nnoremap Vab vabV
+nnoremap VaB vaBV
+
+noremap j gj
+noremap k gk
+
+" Easy buffer navigation
+noremap <C-h>  <C-w>h
+noremap <C-j>  <C-w>j
+noremap <C-k>  <C-w>k
+noremap <C-l>  <C-w>l
+noremap <leader>v <C-w>v
+
+" Fix a tmux binding issue
+map <Esc>[B <Down>]
+
+" Folding ---------------------------------------------------------------------
+
+set foldlevelstart=0
+
+" Make the current location sane.
+nnoremap <c-cr> zvzt
+
+" Space to toggle folds.
+nnoremap <Space> za
+vnoremap <Space> za
+
+" Make zO recursively open whatever top level fold we're in, no matter where the
+" cursor happens to be.
+nnoremap zO zCzO
+
+" Use ,z to "focus" the current fold.
+nnoremap <leader>z zMzvzz
+
+" 'Borrowed' this from Steve Losh (thanks Steve!)
+function! MyFoldText() " {{{
+    let line = getline(v:foldstart)
+
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+    let foldedlinecount = v:foldend - v:foldstart
+
+    " expand tabs into spaces
+    let onetab = strpart('          ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+    let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
+    return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+endfunction " }}}
+set foldtext=MyFoldText()
+
+" Convenience -----------------------------------------------------------------
+
+" Clean trailing whitespace
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<cr>
+
+" Yankring
+nnoremap <silent> <F6> :YRShow<cr>
+
+" Align text
+nnoremap <leader>Al :left<cr>
+nnoremap <leader>Ac :center<cr>
+nnoremap <leader>Ar :right<cr>
+vnoremap <leader>Al :left<cr>
+vnoremap <leader>Ac :center<cr>
+vnoremap <leader>Ar :right<cr>
+
+" Less chording
 nnoremap ; :
 
-" Autosave is cool
-au FocusLost * :wa
+" Sudo to write
+cnoremap w!! w !sudo tee % >/dev/null
 
-nnoremap <leader>w <C-w>v<C-w>l
+" Plugins ---------------------------------------------------------------------
 
-" Non-daft line behavior 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" Remap ctrlp to cmd-t shortcut
+nnoremap <Leader>t :CtrlP<CR>
+let g:ctrlp_custom_ignore = 'env\|venv\'
+let g:ctrlp_dont_split = 'NERD_tree_2'
 
 let g:yankring_history_file = '.yankring'
+
+let g:Powerline_symbols = 'fancy'
+
 map <Leader>n :NERDTreeToggle<CR>
 
-" Hit escape to clear a search
-nnoremap <esc> :noh<return><esc>
+" Environments ----------------------------------------------------------------
 
-" Help a brother out with commonly used filetypes & Django files
+if has('gui_running')
+    set transparency=0
+    set guifont=Menlo\ for\ Powerline:h12
+    "set linespace=1 
+
+    " Remove all the UI cruft
+    set go-=T
+    set go-=l
+    set go-=L
+    set go-=r
+    set go-=R
+
+    " Use a line-drawing char for pretty vertical splits.
+
+    if has("gui_macvim")
+        " Full screen means FULL screen
+        set fuoptions=maxvert,maxhorz
+
+        " Use the normal HIG movements, except for M-Up/Down
+        let macvim_skip_cmd_opt_movement = 1
+        no   <D-Left>       <Home>
+        no!  <D-Left>       <Home>
+        no   <M-Left>       <C-Left>
+        no!  <M-Left>       <C-Left>
+
+        no   <D-Right>      <End>
+        no!  <D-Right>      <End>
+        no   <M-Right>      <C-Right>
+        no!  <M-Right>      <C-Right>
+
+        no   <D-Up>         <C-Home>
+        ino  <D-Up>         <C-Home>
+        imap <M-Up>         <C-o>{
+
+        no   <D-Down>       <C-End>
+        ino  <D-Down>       <C-End>
+        imap <M-Down>       <C-o>}
+
+        imap <M-BS>         <C-w>
+        inoremap <D-BS>     <esc>my0c`y
+    else
+        " Non-MacVim GUI, like Gvim
+    end
+else
+    " Console vim
+    set term=screen-256color
+    set clipboard=unnamed
+endif
+
+" FT specific stuff -----------------------------------------------------------
+
 nnoremap _dt :set ft=htmldjango<CR>
 nnoremap _pd :set ft=python.django<CR>
 
@@ -95,15 +297,3 @@ au BufNewFile,BufRead models.py    setlocal filetype=python.django
 au BufNewFile,BufRead views.py     setlocal filetype=python.django
 au BufNewFile,BufRead settings.py  setlocal filetype=python.django
 au BufNewFile,BufRead forms.py     setlocal filetype=python.django
-
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.pyc
-
-" Remap ctrlp to cmd-t shortcut
-nnoremap <Leader>t :CtrlP<CR>
-let g:ctrlp_custom_ignore = 'env\|venv\'
-
-" Hook up colours 
-let &t_Co=256
-colorscheme molokai
-
-map <Esc>[B <Down>]
