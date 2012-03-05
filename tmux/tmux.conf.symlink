@@ -1,6 +1,7 @@
 # Responsive as F
 set -sg escape-time 1
 
+# Better bindings
 set -g prefix C-a
 bind C-a send-prefix
 
@@ -23,12 +24,18 @@ bind J resize-pane -D 5
 bind K resize-pane -U 5
 bind L resize-pane -R 5
 
-setw -g mode-mouse off
+setw -g mode-keys vi
+
+setw -g mode-mouse off # Not a sissy
 
 set -g base-index 1 # It's less awkward this way, tmux
 
 # Twitchy reloading
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+# Blue shell
+set -g default-command /bin/zsh
+set -g default-shell /bin/zsh
 
 # Fuck yeah, paste
 set-option -g default-command "reattach-to-user-namespace -l zsh"
@@ -75,3 +82,6 @@ set -g status-left-length 40
 set -g status-left "#[fg=green]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
 
 set -g status-right "#[fg=cyan]%d %b %R"
+
+# Log output to a text file on demand
+bind P pipe-pane -o "cat >>~/#W.log" \; display "Toggled logging to ~/#W.log"
