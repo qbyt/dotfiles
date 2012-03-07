@@ -8,6 +8,9 @@ bind C-a send-prefix
 bind | split-window -h
 bind - split-window -v
 
+# Sane scrolling
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
 # Home row movement
 bind h select-pane -L
 bind j select-pane -D
@@ -26,7 +29,10 @@ bind L resize-pane -R 5
 
 setw -g mode-keys vi
 
-setw -g mode-mouse off # Not a sissy
+setw -g mode-mouse on # Enable sissy mode
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+set -g mouse-select-window on
 
 set -g base-index 1 # It's less awkward this way, tmux
 
