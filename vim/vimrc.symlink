@@ -47,6 +47,7 @@ set autoread
 set title
 set linebreak
 set dictionary=/usr/share/dict/words
+set mouse=a
 
 " Autosave is cool
 au FocusLost * silent! :wa
