@@ -29,10 +29,7 @@ bind -r L resize-pane -R 5
 
 setw -g mode-keys vi
 
-setw -g mode-mouse on # Enable sissy mode
-set -g mouse-select-pane on
-set -g mouse-resize-pane on
-set -g mouse-select-window on
+setw -g mode-mouse on # Disable sissy mode
 
 set -g base-index 1 # It's less awkward this way, tmux
 
