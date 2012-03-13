@@ -170,6 +170,9 @@ inoremap <Esc>B <down>
 inoremap <Esc>C <right>
 inoremap <Esc>D <left>
 
+" Yank to system clipboard
+vnoremap Y "*y
+
 " Folding ---------------------------------------------------------------------
 
 set foldlevelstart=0
@@ -289,7 +292,6 @@ if has('gui_running')
 else
     " Console vim
     set term=screen-256color
-    set clipboard=unnamed
 endif
 
 " FT specific stuff -----------------------------------------------------------
