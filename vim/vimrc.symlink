@@ -233,10 +233,19 @@ cnoremap w!! w !sudo tee % >/dev/null
 
 " Plugins ---------------------------------------------------------------------
 
+" Build dem tags
+map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+let Tlist_Ctags_Cmd = "ctags"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>
+
 " Remap ctrlp to cmd-t shortcut
 nnoremap <Leader>t :CtrlP<CR>
 let g:ctrlp_custom_ignore = 'env\|venv\'
 let g:ctrlp_dont_split = 'NERD_tree_2'
+
+let g:ctrlp_working_path_mode = 0
 
 let g:yankring_history_file = '.yankring'
 
@@ -292,6 +301,7 @@ if has('gui_running')
 else
     " Console vim
     set term=screen-256color
+    set clipboard=unnamed
 endif
 
 " FT specific stuff -----------------------------------------------------------
