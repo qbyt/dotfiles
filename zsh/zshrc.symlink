@@ -20,6 +20,10 @@ if [ -n "$TMUX" ]; then
     export TERM=screen-256color
 fi
 
+# Tired of upgrading system vim
+alias vim="mvim -v"
+alias vi="mvim -v"
+
 # Set history options
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
