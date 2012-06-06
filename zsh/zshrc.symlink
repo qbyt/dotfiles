@@ -10,7 +10,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+export EDITOR='/usr/local/bin/vim'
+
+ #Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/X11/bin:/opt/local/bin:/var/lib/gems/1.8/bin:/usr/local:/Users/matt/Library/Haskell/ghc-7.0.3/lib/pandoc-1.8.1.2/bin:/Users/matt/Library/Haskell/bin
 
 # Export MySQL libs
@@ -20,8 +22,17 @@ if [ -n "$TMUX" ]; then
     export TERM=screen-256color
 fi
 
+# Tired of upgrading system vim
+alias vim="mvim -v"
+alias vi="mvim -v"
+
 # I love you tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# Virtualenvwrapper config
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Sites
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Set history options
 HISTFILE=~/.zsh_history

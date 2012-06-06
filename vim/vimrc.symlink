@@ -254,6 +254,21 @@ let g:Powerline_symbols = 'fancy'
 
 map <Leader>n :NERDTreeToggle<CR>
 
+" Load show documentation plugin
+let g:pymode_doc = 1
+
+" Key for show python documentation
+let g:pymode_doc_key = 'K'
+
+" Load run code plugin
+let g:pymode_run = 1
+"
+" Key for run python code
+let g:pymode_run_key = '<leader>r'
+
+" Enable python folding
+let g:pymode_folding = 1
+
 " Environments ----------------------------------------------------------------
 
 if has('gui_running')

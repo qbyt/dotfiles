@@ -67,6 +67,9 @@ set-window-option -g clock-mode-style 24
 bind C-c run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
 bind C-v run "tmux set-buffer $(reattach-to-user-namespace pbpaste); tmux paste-buffer"
 
+# I hate automatic renaming
+setw -g automatic-rename off
+
 # coloring (experimental)
 set -g status-fg white
 set -g status-bg black
