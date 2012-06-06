@@ -20,6 +20,9 @@ if [ -n "$TMUX" ]; then
     export TERM=screen-256color
 fi
 
+# I love you tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
 # Set history options
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
