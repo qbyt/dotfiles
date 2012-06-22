@@ -25,6 +25,7 @@ fi
 # Tired of upgrading system vim
 alias vim="mvim -v"
 alias vi="mvim -v"
+alias emacs="emacs -nw"
 
 # I love you tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

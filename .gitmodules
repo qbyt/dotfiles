@@ -58,3 +58,9 @@
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
+[submodule "vim/bundle/vim-vagrant"]
+	path = vim/bundle/vim-vagrant
+	url = https://github.com/smerrill/vagrant-vim.git
+[submodule "vim/bundle/vim-puppet"]
+	path = vim/bundle/vim-puppet
+	url = https://github.com/uggedal/puppet-vim.git
