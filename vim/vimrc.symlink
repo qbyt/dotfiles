@@ -78,6 +78,7 @@ set expandtab
 set wrap
 set textwidth=80
 set formatoptions=qrn1
+set colorcolumn=+1
 
 " Backups ---------------------------------------------------------------------
 
@@ -269,11 +270,15 @@ let g:pymode_run_key = '<leader>r'
 " Enable python folding
 let g:pymode_folding = 1
 
+let g:pymode_lint_onfly = 1
+let g:pymode_lint_checker = "pylint,pyflakes"
+
 " Environments ----------------------------------------------------------------
 
 if has('gui_running')
     set transparency=0
-    set guifont=Menlo\ for\ Powerline:h12
+    "set guifont=Menlo\ for\ Powerline:h12
+    set guifont=Ubuntu\ Mono:h14
     "set linespace=1 
 
     " Remove all the UI cruft
