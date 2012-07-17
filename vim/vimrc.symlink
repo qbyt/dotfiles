@@ -270,8 +270,11 @@ let g:pymode_run_key = '<leader>r'
 " Enable python folding
 let g:pymode_folding = 1
 
+let g:pymode_lint_ignore = "W0403,W0142,C0301,C0103,C0111"
 let g:pymode_lint_onfly = 1
+let g:pymode_lint_config = "$HOME/.pylintrc"
 let g:pymode_lint_checker = "pylint,pyflakes"
+let g:pymode_lint_hold = 1
 
 " Environments ----------------------------------------------------------------
 
