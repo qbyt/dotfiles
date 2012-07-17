@@ -1,14 +1,16 @@
-# ~/.tmuxinator/project_name.yml
-# you can make as many tabs as you wish...
+# ~/.tmuxinator/[project_name].yml
 
-project_name: project_name
-project_root: ~/Sites/project_name
+project_name: [project_name]
+project_root: ~/Sites/[project_name]
 tabs:
   - editor:
-      layout: main-vertical
+      layout: 2545,364x87,0,0{242x87,0,0,121x87,243,0[121x43,243,0,121x43,243,44]}
       panes:
-        - vim .
-        - workon project_name && ./manage.py shell
-        - ls -l
-  - database: workon project_name && ./manage.py dbshell
-  - server: workon project_name && ./manage.py runserver
+        - workon [project_name] && vim .
+  - shells: 
+      layout: ca7,254x90,0,0[254x44,0,0,254x45,0,45]]
+      panes:
+        - workon [project_name] && ./manage.py shell_plus
+        - workon [project_name] && ls -l
+  - database: workon [project_name] && ./manage.py dbshell
+  - server: workon [project_name] && ./manage.py runserver_plus
