@@ -1,6 +1,7 @@
 !.gitignore
 peepopen.vim
 gitconfig.symlink
+muttrc.symlink
 .netrwhist
 vim/bundle/vim-peepopen/
 tags
