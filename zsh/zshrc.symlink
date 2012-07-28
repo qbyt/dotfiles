@@ -23,8 +23,6 @@ if [ -n "$TMUX" ]; then
 fi
 
 # Tired of upgrading system vim
-alias vim="mvim -v"
-alias vi="mvim -v"
 alias emacs="emacs -nw"
 
 # I love you tmuxinator
