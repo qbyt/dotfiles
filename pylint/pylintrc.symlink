@@ -1,11 +1,11 @@
 [MASTER]
 profile=no
-ignore=.git
+ignore=.git,urls.py,tests.py,migrations
 persistent=yes
 cache-size=500
 
 [MESSAGES CONTROL]
-disable-msg=W0142,C0301,C0103,C0111
+disable-msg=W0142,C0301,C0103,C0111,W0403
 
 [REPORTS]
 output-format=colorized
