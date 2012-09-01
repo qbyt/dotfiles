@@ -30,6 +30,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Sites
 source /usr/local/bin/virtualenvwrapper.sh
 
+# rbenv snippet
+eval "$(rbenv init -)"
+
 # Set history options
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
