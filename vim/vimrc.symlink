@@ -25,7 +25,6 @@ set visualbell
 set cursorline
 set ttyfast
 set backspace=indent,eol,start
-set number
 set relativenumber
 set ruler
 set laststatus=2
