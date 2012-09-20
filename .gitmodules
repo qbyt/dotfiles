@@ -64,3 +64,12 @@
 [submodule "vim/bundle/vim-puppet"]
 	path = vim/bundle/vim-puppet
 	url = https://github.com/uggedal/puppet-vim.git
+[submodule "vim/bundle/rails.vim"]
+	path = vim/bundle/rails.vim
+	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/vim-bundler"]
+	path = vim/bundle/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
+[submodule "vim/bundle/align.vim"]
+	path = vim/bundle/align.vim
+	url = https://github.com/vim-scripts/Align.git
