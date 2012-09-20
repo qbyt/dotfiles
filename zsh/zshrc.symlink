@@ -32,6 +32,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # rbenv snippet
 eval "$(rbenv init -)"
+alias b="bundle exec"
 
 # Set history options
 HISTFILE=~/.zsh_history
