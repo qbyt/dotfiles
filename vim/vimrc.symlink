@@ -94,8 +94,7 @@ let maplocalleader = "\\"
 
 syntax on
 set background=dark
-colorscheme molokai
-
+colorscheme tomorrow_night
 let &t_Co=256
 
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$' " Highlight VCS conflict markers
@@ -278,8 +277,8 @@ let g:pymode_lint_hold = 1
 " Environments ----------------------------------------------------------------
 
 if has('gui_running')
-    set transparency=0
     set guifont=Menlo\ for\ Powerline:h12
+    set transparency=0
     set linespace=1 
 
     " Remove all the UI cruft

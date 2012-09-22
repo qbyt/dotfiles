@@ -72,7 +72,7 @@ setw -g automatic-rename off
 
 # coloring (experimental)
 set -g status-fg white
-set -g status-bg black
+set -g status-bg default
 
 setw -g window-status-fg cyan
 setw -g window-status-bg default
@@ -92,7 +92,7 @@ set -g message-bg black
 set -g message-attr bright
 
 set -g status-left-length 40
-set -g status-left "#[fg=green]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
+set -g status-left "#[fg=cyan]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
 
 set -g status-right "#[fg=cyan]%d %b %R"
 
