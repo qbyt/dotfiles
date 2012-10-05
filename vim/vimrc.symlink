@@ -161,6 +161,7 @@ noremap <C-j>  <C-w>j
 noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
 noremap <leader>v <C-w>v
+noremap <leader>h <C-w>s
 
 " Fix an annoying term issue
 nnoremap <Esc>A <up>
