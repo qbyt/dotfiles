@@ -25,7 +25,6 @@ set visualbell
 set cursorline
 set ttyfast
 set backspace=indent,eol,start
-set number
 set relativenumber
 set ruler
 set laststatus=2
@@ -71,9 +70,9 @@ set wildignore+=*.orig
 
 " Spacing ---------------------------------------------------------------------
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set wrap
 set textwidth=80
@@ -95,8 +94,7 @@ let maplocalleader = "\\"
 
 syntax on
 set background=dark
-colorscheme molokai
-
+colorscheme tomorrow_night
 let &t_Co=256
 
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$' " Highlight VCS conflict markers
@@ -244,7 +242,7 @@ let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
 
 " Remap ctrlp to cmd-t shortcut
-nnoremap <Leader>t :CtrlP<CR>
+nnoremap <Leader>p :CtrlP<CR>
 let g:ctrlp_custom_ignore = 'env\|venv\'
 let g:ctrlp_dont_split = 'NERD_tree_2'
 
@@ -280,10 +278,9 @@ let g:pymode_lint_hold = 1
 " Environments ----------------------------------------------------------------
 
 if has('gui_running')
+    set guifont=Menlo:h12
     set transparency=0
-    "set guifont=Menlo\ for\ Powerline:h12
-    set guifont=Ubuntu\ Mono:h14
-    "set linespace=1 
+    set linespace=1 
 
     " Remove all the UI cruft
     set go-=T

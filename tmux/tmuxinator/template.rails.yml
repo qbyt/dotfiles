@@ -1,0 +1,18 @@
+# ~/.tmuxinator/[project_name].yml
+
+project_name: [project_name]
+project_root: ~/Sites/[project_name]
+pre: sudo /usr/local/mysql/support-files/mysql.server start
+tabs:
+  - editor:
+      layout: 2545,364x87,0,0{242x87,0,0,121x87,243,0[121x43,243,0,121x43,243,44]}
+      panes:
+        - vim .
+  - shells: 
+      layout: ca7,254x90,0,0[254x44,0,0,254x45,0,45]]
+      panes:
+        - bundle exec rails c
+        - ls -l
+  - database: bundle exec rails db
+  - logs: tail -f log/*
+  - server: bundle exec rails s

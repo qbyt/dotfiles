@@ -2,6 +2,7 @@
 
 project_name: [project_name]
 project_root: ~/Sites/[project_name]
+pre: sudo /usr/local/mysql/support-files/mysql.server start
 tabs:
   - editor:
       layout: 2545,364x87,0,0{242x87,0,0,121x87,243,0[121x43,243,0,121x43,243,44]}
