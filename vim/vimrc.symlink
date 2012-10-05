@@ -277,7 +277,7 @@ let g:pymode_lint_hold = 1
 " Environments ----------------------------------------------------------------
 
 if has('gui_running')
-    set guifont=Menlo\ for\ Powerline:h12
+    set guifont=Menlo:h12
     set transparency=0
     set linespace=1 
 
