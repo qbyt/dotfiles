@@ -90,6 +90,10 @@ set noswapfile
 let mapleader = ","
 let maplocalleader = "\\"
 
+" Mode Switching --------------------------------------------------------------
+
+inoremap jj <ESC>
+
 " Colors ----------------------------------------------------------------------
 
 syntax on
