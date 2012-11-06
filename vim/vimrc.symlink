@@ -245,6 +245,14 @@ let Tlist_Ctags_Cmd = "ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
 
+"ruby
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"
+"improve autocomplete menu color
+highlight Pmenu ctermbg=238 gui=bold
 " Remap ctrlp to cmd-t shortcut
 nnoremap <Leader>p :CtrlP<CR>
 let g:ctrlp_custom_ignore = 'env\|venv\'

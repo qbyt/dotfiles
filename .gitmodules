@@ -73,3 +73,9 @@
 [submodule "vim/bundle/align.vim"]
 	path = vim/bundle/align.vim
 	url = https://github.com/vim-scripts/Align.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "rubycomplete.vim"]
+	path = rubycomplete.vim
+	url = https://github.com/vim-scripts/rubycomplete.vim.git
