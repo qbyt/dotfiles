@@ -289,17 +289,17 @@ let g:pymode_lint_hold = 1
 
 " Environments ----------------------------------------------------------------
 
+" Remove UI cruft
+set go-=T
+set go-=l
+set go-=L
+set go-=r
+set go-=R
+
 if has('gui_running')
     set guifont=Menlo:h12
     set transparency=0
     set linespace=1 
-
-    " Remove all the UI cruft
-    set go-=T
-    set go-=l
-    set go-=L
-    set go-=r
-    set go-=R
 
     " Use a line-drawing char for pretty vertical splits.
 
