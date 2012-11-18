@@ -79,3 +79,6 @@
 [submodule "rubycomplete.vim"]
 	path = rubycomplete.vim
 	url = https://github.com/vim-scripts/rubycomplete.vim.git
+[submodule "vim/bundle/vim-rubycomplete"]
+	path = vim/bundle/vim-rubycomplete
+	url = https://github.com/vim-scripts/rubycomplete.vim.git
