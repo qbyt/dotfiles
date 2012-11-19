@@ -262,6 +262,8 @@ let g:ctrlp_working_path_mode = 0
 
 let g:yankring_history_file = '.yankring'
 
+let g:Powerline_colors = 'solarized16'
+let g:Powerline_theme = 'solarized16'
 let g:Powerline_symbols = 'fancy'
 
 map <Leader>n :NERDTreeToggle<CR>
