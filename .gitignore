@@ -4,4 +4,6 @@ gitconfig.symlink
 muttrc.symlink
 .netrwhist
 vim/bundle/vim-peepopen/
+*.log
+irssi/config
 tags
