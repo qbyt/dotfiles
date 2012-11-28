@@ -219,8 +219,10 @@ set foldtext=MyFoldText()
 " Clean trailing whitespace
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<cr>
 
-" Yankring
-nnoremap <silent> <F6> :YRShow<cr>
+" Yankstack
+let g:yankstack_map_keys = 0
+nmap <leader>[ <Plug>yankstack_substitute_older_paste
+nmap <leader>] <Plug>yankstack_substitute_newer_paste
 
 " Align text
 nnoremap <leader>Al :left<cr>
@@ -358,7 +360,7 @@ if has('gui_running')
 else
     " Console vim
     set term=screen-256color
-    set clipboard=unnamed
+    set clipboard+=unnamed
 
     " Use a bar-shaped cursor for insert mode, even through tmux.
     if exists('$TMUX')

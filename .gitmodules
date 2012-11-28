@@ -13,9 +13,6 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/vim-yankring"]
-	path = vim/bundle/vim-yankring
-	url = https://github.com/chrismetcalf/vim-yankring.git
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -82,3 +79,6 @@
 [submodule "vim/bundle/vim-rubycomplete"]
 	path = vim/bundle/vim-rubycomplete
 	url = https://github.com/vim-scripts/rubycomplete.vim.git
+[submodule "vim/bundle/vim-yankstack"]
+	path = vim/bundle/vim-yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack.git
