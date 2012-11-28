@@ -257,7 +257,8 @@ function! DoWindowSwap()
 endfunction
 
 nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
-nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+nmap <silent> <leader>ms :call DoWindowSwap()<CR>
+
 " Plugins ---------------------------------------------------------------------
 
 " Build dem tags
