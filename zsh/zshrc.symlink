@@ -41,6 +41,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 # rbenv snippet
 eval "$(rbenv init -)"
 alias b="bundle exec"
+alias bf="bundle exec foreman run"
 
 # Set history options
 HISTFILE=~/.zsh_history
