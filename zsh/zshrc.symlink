@@ -21,7 +21,7 @@ bindkey "^?" backward-delete-char
 bindkey '^R' history-incremental-search-backward
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/X11/bin:/opt/local/bin:/var/lib/gems/1.8/bin:/usr/local:/Users/matt/Library/Haskell/ghc-7.0.3/lib/pandoc-1.8.1.2/bin:/Users/matt/Library/Haskell/bin:/usr/local/go/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/X11/bin:/opt/local/bin:/var/lib/gems/1.8/bin:/usr/local:/Users/matt/Library/Haskell/ghc-7.0.3/lib/pandoc-1.8.1.2/bin:/Users/matt/Library/Haskell/bin:/Users/matt/Library/Python/2.7/bin:/usr/local/go/bin:/usr/local/heroku/bin
 
 # Export MySQL libs
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH

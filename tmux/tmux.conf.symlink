@@ -1,6 +1,9 @@
 # Responsive as F
 set -sg escape-time 1
 
+# Use Powerline tmux config
+source $HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/tmux/powerline.conf
+
 # Better bindings
 set -g prefix C-a
 bind C-a send-prefix
@@ -55,8 +58,6 @@ setw -g aggressive-resize on
 
 # status bar
 set-option -g status-utf8 on
-set-option -g status-justify centre
-set-option -g status-interval 5
 set -g visual-activity on
 setw -g monitor-activity on
 
@@ -70,31 +71,10 @@ bind C-v run "tmux set-buffer $(reattach-to-user-namespace pbpaste); tmux paste-
 # I hate automatic renaming
 setw -g automatic-rename off
 
-# coloring (experimental)
-set -g status-fg white
-set -g status-bg default
-
-setw -g window-status-fg cyan
-setw -g window-status-bg default
-setw -g window-status-attr dim
-
-setw -g window-status-current-fg white
-setw -g window-status-current-bg red
-setw -g window-status-current-attr bright
-
 set -g pane-border-fg white
 set -g pane-border-bg black
 set -g pane-active-border-fg white
 set -g pane-active-border-bg cyan
-
-set -g message-fg white
-set -g message-bg black
-set -g message-attr bright
-
-set -g status-left-length 40
-set -g status-left "#[fg=cyan]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
-
-set -g status-right "#[fg=cyan]%d %b %R"
 
 # Log output to a text file on demand
 bind P pipe-pane -o "cat >>~/#W.log" \; display "Toggled logging to ~/#W.log"

@@ -287,7 +287,8 @@ let g:ctrlp_working_path_mode = 0
 
 let g:yankring_history_file = '.yankring'
 
-let g:Powerline_symbols = 'fancy'
+" Load Powerline
+set rtp+=$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 
 map <Leader>n :NERDTreeToggle<CR>
 
