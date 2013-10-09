@@ -10,9 +10,13 @@ plugins=(git ruby osx git-flow django gem pip rake python rails3 vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR='/usr/local/bin/vim'
+
+# Setting req'd for Solarized palette
+alias emacs="TERM=xterm-16color emacs" 
+
 export DISABLE_AUTO_TITLE="true"
 
-export EDITOR='/usr/local/bin/vim'
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey "^W" backward-kill-word
 bindkey "^H" backward-delete-char
